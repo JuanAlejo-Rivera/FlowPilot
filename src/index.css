@@ -18,8 +18,8 @@
   html,
   body {
     margin: 0;
-    background: white;
-    color: #3f3f46;
+    background: #eaf0f8;
+    color: #334155;
     font-family: var(--font-sans);
   }
   html.dark,

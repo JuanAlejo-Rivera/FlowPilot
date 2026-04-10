@@ -5,10 +5,10 @@ import { useTranslation } from 'react-i18next'
 import { LanguageSwitcher } from '../components/LanguageSwitcher'
 
 const btnPrimary =
-  'inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white text-[15px] font-semibold border-0 cursor-pointer no-underline shadow-[0_10px_30px_-12px_rgba(99,102,241,0.6)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-12px_rgba(99,102,241,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500 transition-all duration-200'
+  'inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-br from-blue-700 to-cyan-500 dark:from-blue-600 dark:to-cyan-500 text-white text-[15px] font-semibold border-0 cursor-pointer no-underline shadow-[0_12px_30px_-14px_rgba(37,99,235,0.55)] hover:-translate-y-0.5 hover:shadow-[0_18px_46px_-16px_rgba(37,99,235,0.68)] dark:shadow-[0_10px_30px_-12px_rgba(99,102,241,0.6)] dark:hover:shadow-[0_16px_40px_-12px_rgba(99,102,241,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500 transition-all duration-200'
 
 const btnGhost =
-  'inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-zinc-100/60 dark:bg-zinc-800/40 text-zinc-900 dark:text-zinc-100 text-[15px] font-semibold border border-zinc-200 dark:border-zinc-800 cursor-pointer no-underline hover:border-blue-500/50 transition-all duration-200'
+  'inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/70 dark:bg-zinc-800/40 text-slate-700 dark:text-zinc-100 text-[15px] font-semibold border border-slate-300/75 dark:border-zinc-800 cursor-pointer backdrop-blur-sm dark:backdrop-blur-none no-underline hover:bg-white/90 dark:hover:bg-zinc-800/50 hover:border-blue-500/50 transition-all duration-200'
 
 const eyebrow =
   'inline-block text-xs font-semibold tracking-[0.12em] uppercase text-blue-600 dark:text-blue-400 bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/30'
@@ -94,11 +94,11 @@ function Nav() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between px-5 sm:px-8 py-4 backdrop-blur-md backdrop-saturate-150 bg-white/75 dark:bg-[#0b0b12]/75 border-b border-zinc-200 dark:border-zinc-800">
+    <header className="sticky top-0 z-50 flex items-center justify-between px-5 sm:px-8 py-4 backdrop-blur-md backdrop-saturate-150 bg-white/70 dark:bg-[#0b0b12]/75 border-b border-slate-300/60 dark:border-zinc-800 shadow-[0_10px_30px_-24px_rgba(15,23,42,0.55)] dark:shadow-none">
       <Logo />
 
       <nav
-        className={`absolute md:static top-full left-0 right-0 flex flex-col md:flex-row md:items-center gap-0 md:gap-7 bg-white dark:bg-[#0b0b12] md:bg-transparent border-b md:border-b-0 border-zinc-200 dark:border-zinc-800 px-5 md:px-0 pb-4 md:pb-0 pt-2 md:pt-0 transition-all duration-300 md:opacity-100 md:translate-y-0 md:pointer-events-auto ${
+        className={`absolute md:static top-full left-0 right-0 flex flex-col md:flex-row md:items-center gap-0 md:gap-7 bg-white/95 dark:bg-[#0b0b12] md:bg-transparent border-b md:border-b-0 border-slate-300/60 dark:border-zinc-800 px-5 md:px-0 pb-4 md:pb-0 pt-2 md:pt-0 transition-all duration-300 md:opacity-100 md:translate-y-0 md:pointer-events-auto ${
           open
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 -translate-y-2 pointer-events-none'
@@ -180,9 +180,9 @@ function MockUI() {
     <div
       role="img"
       aria-label="FlowPilot workspace preview"
-      className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12] overflow-hidden shadow-[0_30px_80px_-30px_rgba(0,0,0,0.35),0_8px_30px_-10px_rgba(0,0,0,0.15)] [transform:perspective(1600px)_rotateX(2deg)_rotateY(-4deg)] hover:[transform:perspective(1600px)_rotateX(0deg)_rotateY(0deg)] transition-transform duration-500 ease-out"
+      className="rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/88 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none overflow-hidden shadow-[0_32px_90px_-34px_rgba(15,23,42,0.38),0_12px_34px_-16px_rgba(15,23,42,0.24)] dark:shadow-[0_30px_80px_-30px_rgba(0,0,0,0.35),0_8px_30px_-10px_rgba(0,0,0,0.15)] [transform:perspective(1600px)_rotateX(2deg)_rotateY(-4deg)] hover:[transform:perspective(1600px)_rotateX(0deg)_rotateY(0deg)] transition-transform duration-500 ease-out"
     >
-      <div className="flex items-center gap-1.5 px-3.5 py-3 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
+      <div className="flex items-center gap-1.5 px-3.5 py-3 border-b border-slate-200 dark:border-zinc-800 bg-slate-100/80 dark:bg-zinc-900/50">
         <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
         <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
         <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
@@ -191,7 +191,7 @@ function MockUI() {
         </div>
       </div>
       <div className="grid grid-cols-[150px_1fr] min-h-[320px]">
-        <aside className="border-r border-zinc-200 dark:border-zinc-800 p-4 bg-zinc-50/60 dark:bg-zinc-900/40">
+        <aside className="border-r border-slate-200 dark:border-zinc-800 p-4 bg-slate-100/70 dark:bg-zinc-900/40">
           <div className="text-[11px] uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2.5">
             {t('landing.mock.workspace')}
           </div>
@@ -231,7 +231,7 @@ function MockUI() {
             {columns.map((column) => (
               <div
                 key={column.title}
-                className="bg-zinc-100 dark:bg-zinc-900/60 rounded-lg p-2.5 min-h-[180px]"
+                className="bg-slate-100/85 dark:bg-zinc-900/60 rounded-lg p-2.5 min-h-[180px]"
               >
                 <div className="text-[11px] uppercase tracking-wide text-zinc-500 dark:text-zinc-400 mb-2">
                   {column.title}
@@ -239,7 +239,7 @@ function MockUI() {
                 {column.items.map((item) => (
                   <div
                     key={item}
-                    className="bg-white dark:bg-[#0b0b12] border border-zinc-200 dark:border-zinc-800 rounded-md p-2 mb-1.5 hover:-translate-y-0.5 transition-transform duration-200"
+                    className="bg-white/92 dark:bg-[#0b0b12] border border-slate-200 dark:border-zinc-800 rounded-md p-2 mb-1.5 hover:-translate-y-0.5 transition-transform duration-200"
                   >
                     <div className="text-xs text-zinc-900 dark:text-zinc-100 mb-1.5">
                       {item}
@@ -269,7 +269,7 @@ function FeatureCard({
   icon: ReactNode
 }) {
   return (
-    <div className="h-full p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12] text-left transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:shadow-[0_20px_40px_-20px_rgba(37,99,235,0.28)]">
+    <div className="h-full p-8 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/85 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none text-left shadow-[0_16px_42px_-30px_rgba(15,23,42,0.45)] dark:shadow-none transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:shadow-[0_24px_52px_-26px_rgba(37,99,235,0.35)] dark:hover:shadow-none">
       <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 mb-4">
         {icon}
       </div>
@@ -293,7 +293,7 @@ function BenefitCard({
   description: string
 }) {
   return (
-    <div className="h-full text-center p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12] transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40">
+    <div className="h-full text-center p-8 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/85 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_16px_42px_-30px_rgba(15,23,42,0.45)] dark:shadow-none transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40">
       <div className="text-6xl font-bold tracking-tight leading-none bg-gradient-to-br from-blue-600 to-cyan-500 bg-clip-text text-transparent">
         {metric}
       </div>
@@ -400,7 +400,7 @@ export default function LandingPage() {
   return (
     <div
       id="top"
-      className="min-h-screen w-full bg-white dark:bg-[#0b0b12] text-zinc-600 dark:text-zinc-400 font-sans antialiased"
+      className="min-h-screen w-full bg-[radial-gradient(120%_120%_at_0%_0%,#ffffff_0%,#eef4ff_38%,#edf2fa_100%)] dark:bg-none dark:bg-[#0b0b12] text-zinc-600 dark:text-zinc-400 font-sans antialiased"
     >
       <Nav />
 
@@ -424,7 +424,7 @@ export default function LandingPage() {
           </p>
           <div className="flex flex-wrap gap-3 mt-8 mb-3.5">
             <a href="#cta" className={btnPrimary}>
-              {t('nav.startFree')} <span aria-hidden>â†’</span>
+              {t('nav.startFree')} <span aria-hidden>{'->'}</span>
             </a>
             <Link to="/demo" className={btnGhost}>
               <svg
@@ -455,7 +455,7 @@ export default function LandingPage() {
 
       <section
         id="features"
-        className="px-6 md:px-8 py-20 md:py-24 border-t border-zinc-200 dark:border-zinc-800"
+        className="px-6 md:px-8 py-20 md:py-24 border-t border-slate-200 dark:border-zinc-800"
       >
         <Reveal className={sectionHead}>
           <span className={eyebrow}>{t('landing.features.badge')}</span>
@@ -474,7 +474,7 @@ export default function LandingPage() {
 
       <section
         id="benefits"
-        className="px-6 md:px-8 py-20 md:py-24 border-t border-zinc-200 dark:border-zinc-800 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(37,99,235,0.10),transparent_70%)]"
+        className="px-6 md:px-8 py-20 md:py-24 border-t border-slate-200 dark:border-zinc-800 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(37,99,235,0.10),transparent_70%)] dark:bg-none"
       >
         <Reveal className={sectionHead}>
           <span className={eyebrow}>{t('landing.benefits.badge')}</span>
@@ -493,7 +493,7 @@ export default function LandingPage() {
 
       <section
         id="proof"
-        className="px-6 md:px-8 py-20 md:py-24 border-t border-zinc-200 dark:border-zinc-800"
+        className="px-6 md:px-8 py-20 md:py-24 border-t border-slate-200 dark:border-zinc-800"
       >
         <Reveal className={sectionHead}>
           <span className={eyebrow}>{t('landing.proof.badge')}</span>
@@ -504,7 +504,7 @@ export default function LandingPage() {
           {logos.map((name) => (
             <span
               key={name}
-              className="px-4 py-2.5 border border-zinc-200 dark:border-zinc-800 rounded-full text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-blue-500/40 hover:-translate-y-0.5 transition-all duration-200"
+              className="px-4 py-2.5 border border-slate-200 dark:border-zinc-800 bg-white/65 dark:bg-transparent rounded-full text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-blue-500/40 hover:-translate-y-0.5 transition-all duration-200"
             >
               {name}
             </span>
@@ -513,7 +513,7 @@ export default function LandingPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-6 max-w-[1120px] mx-auto items-stretch">
           <Reveal>
-            <div className="h-full p-9 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12]">
+            <div className="h-full p-9 rounded-3xl border border-slate-200 dark:border-zinc-800 bg-white/88 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_20px_54px_-34px_rgba(15,23,42,0.42)] dark:shadow-none">
               <p className="text-xl md:text-[22px] leading-snug tracking-tight text-zinc-900 dark:text-zinc-100 m-0 mb-6">
                 {t('landing.proof.testimonial')}
               </p>
@@ -536,7 +536,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-2 max-[520px]:grid-cols-1 gap-4">
             {stats.map((stat, index) => (
               <Reveal key={stat.label} delay={index * 60}>
-                <div className="h-full text-center p-7 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12] hover:-translate-y-1 hover:border-blue-500/40 transition-all duration-200">
+                <div className="h-full text-center p-7 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/84 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_14px_36px_-28px_rgba(15,23,42,0.4)] dark:shadow-none hover:-translate-y-1 hover:border-blue-500/40 transition-all duration-200">
                   <div className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
                     {stat.value}
                   </div>
@@ -552,7 +552,7 @@ export default function LandingPage() {
 
       <section id="cta" className="px-6 md:px-8 py-20 md:py-24">
         <Reveal>
-          <div className="max-w-[880px] mx-auto rounded-[24px] border border-blue-500/40 px-8 md:px-12 py-14 md:py-16 text-center bg-white dark:bg-[#0b0b12] [background-image:radial-gradient(60%_80%_at_50%_0%,rgba(37,99,235,0.18),transparent_70%)]">
+          <div className="max-w-[880px] mx-auto rounded-[24px] border border-blue-500/40 px-8 md:px-12 py-14 md:py-16 text-center bg-white/88 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_26px_64px_-30px_rgba(15,23,42,0.34)] dark:shadow-none [background-image:radial-gradient(60%_80%_at_50%_0%,rgba(37,99,235,0.18),transparent_70%)]">
             <h2 className="text-3xl md:text-[40px] tracking-tight font-medium text-zinc-900 dark:text-zinc-100 m-0 mb-3">
               {t('landing.cta.title')}
             </h2>
@@ -568,7 +568,7 @@ export default function LandingPage() {
                 placeholder={t('landing.cta.emailPlaceholder')}
                 aria-label={t('landing.cta.emailAria')}
                 required
-                className="flex-1 min-w-[240px] px-4 py-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12] text-zinc-900 dark:text-zinc-100 text-[15px] outline-none focus:border-blue-500 transition-colors"
+                className="flex-1 min-w-[240px] px-4 py-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white/85 dark:bg-[#0b0b12] text-zinc-900 dark:text-zinc-100 text-[15px] outline-none focus:border-blue-500 transition-colors"
               />
               <button type="submit" className={btnPrimary}>
                 {t('landing.cta.requestAccess')}
@@ -581,7 +581,7 @@ export default function LandingPage() {
         </Reveal>
       </section>
 
-      <footer className="px-6 md:px-8 pt-14 pb-8 border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50/60 dark:bg-zinc-900/40">
+      <footer className="px-6 md:px-8 pt-14 pb-8 border-t border-slate-300/70 dark:border-zinc-800 bg-[linear-gradient(180deg,rgba(255,255,255,0.58),rgba(226,232,240,0.75))] dark:bg-none dark:bg-zinc-900/40">
         <div className="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 mb-10">
           <div>
             <Logo />
@@ -665,7 +665,7 @@ export default function LandingPage() {
           </nav>
         </div>
 
-        <div className="max-w-[1120px] mx-auto flex flex-col md:flex-row justify-between gap-2 pt-6 border-t border-zinc-200 dark:border-zinc-800 text-[13px] text-zinc-500 dark:text-zinc-500 text-center md:text-left">
+        <div className="max-w-[1120px] mx-auto flex flex-col md:flex-row justify-between gap-2 pt-6 border-t border-slate-300/70 dark:border-zinc-800 text-[13px] text-zinc-500 dark:text-zinc-500 text-center md:text-left">
           <span>{'\u00A9'} {new Date().getFullYear()} {t('common.brand')}, Inc.</span>
           <span>{t('landing.footer.madeWith')}</span>
         </div>

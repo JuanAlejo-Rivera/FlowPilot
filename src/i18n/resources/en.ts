@@ -108,7 +108,7 @@ export const en = {
       product: 'Product',
       company: 'Company',
       resources: 'Resources',
-      madeWith: 'Made with care.',
+      madeWith: 'Made with care. Powered by AI.',
       links: {
         features: 'Features',
         benefits: 'Benefits',
