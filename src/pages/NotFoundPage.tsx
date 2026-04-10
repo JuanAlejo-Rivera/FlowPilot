@@ -33,7 +33,7 @@ export default function NotFoundPage() {
           <div className="mt-8">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-br from-blue-700 to-cyan-500 dark:from-blue-600 dark:to-cyan-500 text-white text-[15px] font-semibold no-underline shadow-[0_12px_30px_-14px_rgba(37,99,235,0.55)] hover:-translate-y-0.5 hover:shadow-[0_18px_46px_-16px_rgba(37,99,235,0.68)] dark:shadow-[0_10px_30px_-12px_rgba(99,102,241,0.6)] dark:hover:shadow-[0_16px_40px_-12px_rgba(99,102,241,0.75)] transition-all duration-200"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-linear-to-br from-blue-700 to-cyan-500 dark:from-blue-600 dark:to-cyan-500 text-white text-[15px] font-semibold no-underline shadow-[0_12px_30px_-14px_rgba(37,99,235,0.55)] hover:-translate-y-0.5 hover:shadow-[0_18px_46px_-16px_rgba(37,99,235,0.68)] dark:shadow-[0_10px_30px_-12px_rgba(99,102,241,0.6)] dark:hover:shadow-[0_16px_40px_-12px_rgba(99,102,241,0.75)] transition-all duration-200"
             >
               {t('common.backHome')}
             </Link>

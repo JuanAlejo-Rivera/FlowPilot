@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { LanguageSwitcher } from '../components/LanguageSwitcher'
 
 const btnPrimary =
-  'inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-br from-blue-700 to-cyan-500 dark:from-blue-600 dark:to-cyan-500 text-white text-[15px] font-semibold border-0 cursor-pointer no-underline shadow-[0_12px_30px_-14px_rgba(37,99,235,0.55)] hover:-translate-y-0.5 hover:shadow-[0_18px_46px_-16px_rgba(37,99,235,0.68)] dark:shadow-[0_10px_30px_-12px_rgba(99,102,241,0.6)] dark:hover:shadow-[0_16px_40px_-12px_rgba(99,102,241,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500 transition-all duration-200'
+  'inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-linear-to-br from-blue-700 to-cyan-500 dark:from-blue-600 dark:to-cyan-500 text-white text-[15px] font-semibold border-0 cursor-pointer no-underline shadow-[0_12px_30px_-14px_rgba(37,99,235,0.55)] hover:-translate-y-0.5 hover:shadow-[0_18px_46px_-16px_rgba(37,99,235,0.68)] dark:shadow-[0_10px_30px_-12px_rgba(99,102,241,0.6)] dark:hover:shadow-[0_16px_40px_-12px_rgba(99,102,241,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500 transition-all duration-200'
 
 const btnGhost =
   'inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/70 dark:bg-zinc-800/40 text-slate-700 dark:text-zinc-100 text-[15px] font-semibold border border-slate-300/75 dark:border-zinc-800 cursor-pointer backdrop-blur-sm dark:backdrop-blur-none no-underline hover:bg-white/90 dark:hover:bg-zinc-800/50 hover:border-blue-500/50 transition-all duration-200'
@@ -141,7 +141,9 @@ function Nav() {
           {t('nav.startFree')}
         </a>
 
-        <LanguageSwitcher className="mt-3 md:mt-0 md:ml-1" />
+        <div className="mt-3 md:mt-0 md:ml-1 self-start w-fit">
+          <LanguageSwitcher />
+        </div>
       </nav>
 
       <button
@@ -180,18 +182,18 @@ function MockUI() {
     <div
       role="img"
       aria-label="FlowPilot workspace preview"
-      className="rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/88 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none overflow-hidden shadow-[0_32px_90px_-34px_rgba(15,23,42,0.38),0_12px_34px_-16px_rgba(15,23,42,0.24)] dark:shadow-[0_30px_80px_-30px_rgba(0,0,0,0.35),0_8px_30px_-10px_rgba(0,0,0,0.15)] [transform:perspective(1600px)_rotateX(2deg)_rotateY(-4deg)] hover:[transform:perspective(1600px)_rotateX(0deg)_rotateY(0deg)] transition-transform duration-500 ease-out"
+      className="rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/88 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none overflow-hidden shadow-[0_32px_90px_-34px_rgba(15,23,42,0.38),0_12px_34px_-16px_rgba(15,23,42,0.24)] dark:shadow-[0_30px_80px_-30px_rgba(0,0,0,0.35),0_8px_30px_-10px_rgba(0,0,0,0.15)] transform-[perspective(1600px)_rotateX(2deg)_rotateY(-4deg)] hover:transform-[perspective(1600px)_rotateX(0deg)_rotateY(0deg)] transition-transform duration-500 ease-out"
     >
       <div className="flex items-center gap-1.5 px-3.5 py-3 border-b border-slate-200 dark:border-zinc-800 bg-slate-100/80 dark:bg-zinc-900/50">
         <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
         <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
         <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-        <div className="ml-2.5 flex-1 px-3 py-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-800/60 text-xs text-zinc-500 dark:text-zinc-400 font-mono text-left">
+        <div className="ml-2.5 flex-1 px-3 py-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-800/60 text-xs text-zinc-500 dark:text-zinc-400 font-mono text-left truncate">
           flowpilot.ai/workspace/atlas
         </div>
       </div>
-      <div className="grid grid-cols-[150px_1fr] min-h-[320px]">
-        <aside className="border-r border-slate-200 dark:border-zinc-800 p-4 bg-slate-100/70 dark:bg-zinc-900/40">
+      <div className="grid grid-cols-[120px_1fr] sm:grid-cols-[150px_1fr] min-h-80">
+        <aside className="border-r border-slate-200 dark:border-zinc-800 p-3 sm:p-4 bg-slate-100/70 dark:bg-zinc-900/40">
           <div className="text-[11px] uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2.5">
             {t('landing.mock.workspace')}
           </div>
@@ -231,7 +233,7 @@ function MockUI() {
             {columns.map((column) => (
               <div
                 key={column.title}
-                className="bg-slate-100/85 dark:bg-zinc-900/60 rounded-lg p-2.5 min-h-[180px]"
+                className="bg-slate-100/85 dark:bg-zinc-900/60 rounded-lg p-2.5 min-h-45"
               >
                 <div className="text-[11px] uppercase tracking-wide text-zinc-500 dark:text-zinc-400 mb-2">
                   {column.title}
@@ -245,7 +247,7 @@ function MockUI() {
                       {item}
                     </div>
                     <div className="flex items-center gap-1.5 text-[10px] text-zinc-500 dark:text-zinc-400">
-                      <span className="w-3.5 h-3.5 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 inline-block" />
+                      <span className="w-3.5 h-3.5 rounded-full bg-linear-to-br from-blue-600 to-cyan-500 inline-block" />
                       <span>2d</span>
                     </div>
                   </div>
@@ -294,7 +296,7 @@ function BenefitCard({
 }) {
   return (
     <div className="h-full text-center p-8 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/85 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_16px_42px_-30px_rgba(15,23,42,0.45)] dark:shadow-none transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40">
-      <div className="text-6xl font-bold tracking-tight leading-none bg-gradient-to-br from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+      <div className="text-6xl font-bold tracking-tight leading-none bg-linear-to-br from-blue-600 to-cyan-500 bg-clip-text text-transparent">
         {metric}
       </div>
       <div className="text-base font-semibold text-zinc-900 dark:text-zinc-100 mt-3 mb-2">
@@ -404,22 +406,22 @@ export default function LandingPage() {
     >
       <Nav />
 
-      <section className="relative overflow-hidden max-w-[1280px] mx-auto px-6 md:px-8 py-16 md:py-24 grid gap-12 md:gap-14 md:grid-cols-[1.05fr_1.15fr] items-center">
+      <section className="relative overflow-hidden max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24 grid gap-12 md:gap-14 md:grid-cols-[1.05fr_1.15fr] items-center">
         <div
           aria-hidden
-          className="absolute inset-0 pointer-events-none bg-[radial-gradient(60%_55%_at_80%_10%,rgba(37,99,235,0.18),transparent_60%),radial-gradient(50%_50%_at_10%_90%,rgba(6,182,212,0.15),transparent_60%)]"
+          className="absolute inset-0 pointer-events-none bg-[radial-gradient(60%_55%_at_80%_10%,rgba(37,99,235,0.18),transparent_60%),radial-gradient(50%_50%_at_10%_90%,rgba(6,182,212,0.15),transparent_60%)] dark:opacity-40"
         />
 
         <Reveal className="relative">
           <span className={eyebrow}>{t('landing.badge')}</span>
           <h1 className="mt-5 mb-5 text-[44px] md:text-6xl leading-[1.05] tracking-[-0.02em] font-medium text-zinc-900 dark:text-zinc-100">
             {t('landing.hero.titleLead')}{' '}
-            <span className="bg-gradient-to-br from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-br from-blue-600 to-cyan-500 bg-clip-text text-transparent">
               {t('landing.hero.titleAccent')}
             </span>
             {t('landing.hero.titleTail')}
           </h1>
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-zinc-600 dark:text-zinc-400 max-w-[540px]">
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-zinc-600 dark:text-zinc-400 max-w-135">
             {t('landing.hero.subtitle')}
           </p>
           <div className="flex flex-wrap gap-3 mt-8 mb-3.5">
@@ -448,7 +450,7 @@ export default function LandingPage() {
           <MockUI />
           <div
             aria-hidden
-            className="absolute -inset-[10%] -z-10 blur-3xl bg-[radial-gradient(closest-side,rgba(37,99,235,0.35),transparent_70%)]"
+            className="absolute -inset-[10%] -z-10 blur-3xl bg-[radial-gradient(closest-side,rgba(37,99,235,0.35),transparent_70%)] dark:opacity-40"
           />
         </Reveal>
       </section>
@@ -463,7 +465,7 @@ export default function LandingPage() {
           <p className={sectionLead}>{t('landing.features.lead')}</p>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1120px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-280 mx-auto">
           {features.map((feature, index) => (
             <Reveal key={feature.title} delay={index * 90}>
               <FeatureCard {...feature} />
@@ -482,7 +484,7 @@ export default function LandingPage() {
           <p className={sectionLead}>{t('landing.benefits.lead')}</p>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1120px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-280 mx-auto">
           {benefits.map((benefit, index) => (
             <Reveal key={benefit.label} delay={index * 80}>
               <BenefitCard {...benefit} />
@@ -500,7 +502,7 @@ export default function LandingPage() {
           <h2 className={sectionH2}>{t('landing.proof.title')}</h2>
         </Reveal>
 
-        <Reveal className="flex flex-wrap justify-center gap-3 max-w-[900px] mx-auto mb-14">
+        <Reveal className="flex flex-wrap justify-center gap-3 max-w-225 mx-auto mb-14">
           {logos.map((name) => (
             <span
               key={name}
@@ -511,14 +513,14 @@ export default function LandingPage() {
           ))}
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-6 max-w-[1120px] mx-auto items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-6 max-w-280 mx-auto items-stretch">
           <Reveal>
             <div className="h-full p-9 rounded-3xl border border-slate-200 dark:border-zinc-800 bg-white/88 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_20px_54px_-34px_rgba(15,23,42,0.42)] dark:shadow-none">
               <p className="text-xl md:text-[22px] leading-snug tracking-tight text-zinc-900 dark:text-zinc-100 m-0 mb-6">
                 {t('landing.proof.testimonial')}
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 text-white inline-flex items-center justify-center font-bold text-sm">
+                <div className="w-11 h-11 rounded-full bg-linear-to-br from-blue-600 to-cyan-500 text-white inline-flex items-center justify-center font-bold text-sm">
                   MR
                 </div>
                 <div>
@@ -552,7 +554,7 @@ export default function LandingPage() {
 
       <section id="cta" className="px-6 md:px-8 py-20 md:py-24">
         <Reveal>
-          <div className="max-w-[880px] mx-auto rounded-[24px] border border-blue-500/40 px-8 md:px-12 py-14 md:py-16 text-center bg-white/88 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_26px_64px_-30px_rgba(15,23,42,0.34)] dark:shadow-none [background-image:radial-gradient(60%_80%_at_50%_0%,rgba(37,99,235,0.18),transparent_70%)]">
+          <div className="max-w-220 mx-auto rounded-3xl border border-blue-500/40 px-8 md:px-12 py-14 md:py-16 text-center bg-white/88 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_26px_64px_-30px_rgba(15,23,42,0.34)] dark:shadow-none bg-[radial-gradient(60%_80%_at_50%_0%,rgba(37,99,235,0.18),transparent_70%)] dark:bg-none">
             <h2 className="text-3xl md:text-[40px] tracking-tight font-medium text-zinc-900 dark:text-zinc-100 m-0 mb-3">
               {t('landing.cta.title')}
             </h2>
@@ -561,16 +563,16 @@ export default function LandingPage() {
             </p>
             <form
               onSubmit={(event) => event.preventDefault()}
-              className="flex flex-wrap gap-2 max-w-[480px] mx-auto mb-3.5"
+              className="flex flex-wrap gap-2 max-w-120 mx-auto mb-3.5"
             >
               <input
                 type="email"
                 placeholder={t('landing.cta.emailPlaceholder')}
                 aria-label={t('landing.cta.emailAria')}
                 required
-                className="flex-1 min-w-[240px] px-4 py-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white/85 dark:bg-[#0b0b12] text-zinc-900 dark:text-zinc-100 text-[15px] outline-none focus:border-blue-500 transition-colors"
+                className="w-full min-w-0 sm:flex-1 sm:min-w-60 px-4 py-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white/85 dark:bg-[#0b0b12] text-zinc-900 dark:text-zinc-100 text-[15px] outline-none focus:border-blue-500 transition-colors"
               />
-              <button type="submit" className={btnPrimary}>
+              <button type="submit" className={`${btnPrimary} w-full sm:w-auto`}>
                 {t('landing.cta.requestAccess')}
               </button>
             </form>
@@ -582,10 +584,10 @@ export default function LandingPage() {
       </section>
 
       <footer className="px-6 md:px-8 pt-14 pb-8 border-t border-slate-300/70 dark:border-zinc-800 bg-[linear-gradient(180deg,rgba(255,255,255,0.58),rgba(226,232,240,0.75))] dark:bg-none dark:bg-zinc-900/40">
-        <div className="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 mb-10">
+        <div className="max-w-280 mx-auto grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 mb-10">
           <div>
             <Logo />
-            <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-400 max-w-[280px] m-0">
+            <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-400 max-w-70 m-0">
               {t('landing.footer.blurb')}
             </p>
           </div>
@@ -665,7 +667,7 @@ export default function LandingPage() {
           </nav>
         </div>
 
-        <div className="max-w-[1120px] mx-auto flex flex-col md:flex-row justify-between gap-2 pt-6 border-t border-slate-300/70 dark:border-zinc-800 text-[13px] text-zinc-500 dark:text-zinc-500 text-center md:text-left">
+        <div className="max-w-280 mx-auto flex flex-col md:flex-row justify-between gap-2 pt-6 border-t border-slate-300/70 dark:border-zinc-800 text-[13px] text-zinc-500 dark:text-zinc-500 text-center md:text-left">
           <span>{'\u00A9'} {new Date().getFullYear()} {t('common.brand')}, Inc.</span>
           <span>{t('landing.footer.madeWith')}</span>
         </div>
