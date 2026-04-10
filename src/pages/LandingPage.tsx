@@ -1,17 +1,17 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+﻿import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import { LanguageSwitcher } from '../components/LanguageSwitcher'
 
 const btnPrimary =
-  'inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-br from-fuchsia-500 to-indigo-500 text-white text-[15px] font-semibold border-0 cursor-pointer no-underline shadow-[0_10px_30px_-12px_rgba(99,102,241,0.6)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-12px_rgba(99,102,241,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-fuchsia-500 transition-all duration-200'
+  'inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white text-[15px] font-semibold border-0 cursor-pointer no-underline shadow-[0_10px_30px_-12px_rgba(99,102,241,0.6)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-12px_rgba(99,102,241,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500 transition-all duration-200'
 
 const btnGhost =
-  'inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-zinc-100/60 dark:bg-zinc-800/40 text-zinc-900 dark:text-zinc-100 text-[15px] font-semibold border border-zinc-200 dark:border-zinc-800 cursor-pointer no-underline hover:border-fuchsia-500/50 transition-all duration-200'
+  'inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-zinc-100/60 dark:bg-zinc-800/40 text-zinc-900 dark:text-zinc-100 text-[15px] font-semibold border border-zinc-200 dark:border-zinc-800 cursor-pointer no-underline hover:border-blue-500/50 transition-all duration-200'
 
 const eyebrow =
-  'inline-block text-xs font-semibold tracking-[0.12em] uppercase text-fuchsia-600 dark:text-fuchsia-400 bg-fuchsia-500/10 px-3 py-1.5 rounded-full border border-fuchsia-500/30'
+  'inline-block text-xs font-semibold tracking-[0.12em] uppercase text-blue-600 dark:text-blue-400 bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/30'
 
 const sectionHead = 'text-center max-w-3xl mx-auto mb-14'
 const sectionH2 =
@@ -76,8 +76,8 @@ function Logo() {
         <svg viewBox="0 0 24 24" width="24" height="24">
           <defs>
             <linearGradient id="logo-gradient" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0" stopColor="#a855f7" />
-              <stop offset="1" stopColor="#22d3ee" />
+              <stop offset="0" stopColor="#2563eb" />
+              <stop offset="1" stopColor="#06b6d4" />
             </linearGradient>
           </defs>
           <path d="M4 12 L12 4 L20 12 L12 20 Z" fill="url(#logo-gradient)" />
@@ -196,7 +196,7 @@ function MockUI() {
             {t('landing.mock.workspace')}
           </div>
           <ul className="list-none p-0 m-0 space-y-0.5">
-            <li className="px-2.5 py-1.5 rounded-md text-sm bg-fuchsia-500/10 text-fuchsia-600 dark:text-fuchsia-400 font-semibold">
+            <li className="px-2.5 py-1.5 rounded-md text-sm bg-blue-500/10 text-blue-600 dark:text-blue-400 font-semibold">
               {t('landing.mock.dashboard')}
             </li>
             <li className="px-2.5 py-1.5 rounded-md text-sm text-zinc-700 dark:text-zinc-300">
@@ -245,7 +245,7 @@ function MockUI() {
                       {item}
                     </div>
                     <div className="flex items-center gap-1.5 text-[10px] text-zinc-500 dark:text-zinc-400">
-                      <span className="w-3.5 h-3.5 rounded-full bg-gradient-to-br from-fuchsia-500 to-cyan-400 inline-block" />
+                      <span className="w-3.5 h-3.5 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 inline-block" />
                       <span>2d</span>
                     </div>
                   </div>
@@ -269,8 +269,8 @@ function FeatureCard({
   icon: ReactNode
 }) {
   return (
-    <div className="h-full p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12] text-left transition-all duration-300 hover:-translate-y-1 hover:border-fuchsia-500/40 hover:shadow-[0_20px_40px_-20px_rgba(168,85,247,0.25)]">
-      <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-fuchsia-500/10 text-fuchsia-600 dark:text-fuchsia-400 mb-4">
+    <div className="h-full p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12] text-left transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:shadow-[0_20px_40px_-20px_rgba(37,99,235,0.28)]">
+      <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 mb-4">
         {icon}
       </div>
       <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 m-0 mb-2">
@@ -293,8 +293,8 @@ function BenefitCard({
   description: string
 }) {
   return (
-    <div className="h-full text-center p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12] transition-all duration-300 hover:-translate-y-1 hover:border-fuchsia-500/40">
-      <div className="text-6xl font-bold tracking-tight leading-none bg-gradient-to-br from-fuchsia-500 to-cyan-400 bg-clip-text text-transparent">
+    <div className="h-full text-center p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12] transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40">
+      <div className="text-6xl font-bold tracking-tight leading-none bg-gradient-to-br from-blue-600 to-cyan-500 bg-clip-text text-transparent">
         {metric}
       </div>
       <div className="text-base font-semibold text-zinc-900 dark:text-zinc-100 mt-3 mb-2">
@@ -407,14 +407,14 @@ export default function LandingPage() {
       <section className="relative overflow-hidden max-w-[1280px] mx-auto px-6 md:px-8 py-16 md:py-24 grid gap-12 md:gap-14 md:grid-cols-[1.05fr_1.15fr] items-center">
         <div
           aria-hidden
-          className="absolute inset-0 pointer-events-none bg-[radial-gradient(60%_55%_at_80%_10%,rgba(168,85,247,0.18),transparent_60%),radial-gradient(50%_50%_at_10%_90%,rgba(34,211,238,0.15),transparent_60%)]"
+          className="absolute inset-0 pointer-events-none bg-[radial-gradient(60%_55%_at_80%_10%,rgba(37,99,235,0.18),transparent_60%),radial-gradient(50%_50%_at_10%_90%,rgba(6,182,212,0.15),transparent_60%)]"
         />
 
         <Reveal className="relative">
           <span className={eyebrow}>{t('landing.badge')}</span>
           <h1 className="mt-5 mb-5 text-[44px] md:text-6xl leading-[1.05] tracking-[-0.02em] font-medium text-zinc-900 dark:text-zinc-100">
             {t('landing.hero.titleLead')}{' '}
-            <span className="bg-gradient-to-br from-fuchsia-500 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-br from-blue-600 to-cyan-500 bg-clip-text text-transparent">
               {t('landing.hero.titleAccent')}
             </span>
             {t('landing.hero.titleTail')}
@@ -424,7 +424,7 @@ export default function LandingPage() {
           </p>
           <div className="flex flex-wrap gap-3 mt-8 mb-3.5">
             <a href="#cta" className={btnPrimary}>
-              {t('nav.startFree')} <span aria-hidden>→</span>
+              {t('nav.startFree')} <span aria-hidden>â†’</span>
             </a>
             <Link to="/demo" className={btnGhost}>
               <svg
@@ -448,7 +448,7 @@ export default function LandingPage() {
           <MockUI />
           <div
             aria-hidden
-            className="absolute -inset-[10%] -z-10 blur-3xl bg-[radial-gradient(closest-side,rgba(168,85,247,0.35),transparent_70%)]"
+            className="absolute -inset-[10%] -z-10 blur-3xl bg-[radial-gradient(closest-side,rgba(37,99,235,0.35),transparent_70%)]"
           />
         </Reveal>
       </section>
@@ -474,7 +474,7 @@ export default function LandingPage() {
 
       <section
         id="benefits"
-        className="px-6 md:px-8 py-20 md:py-24 border-t border-zinc-200 dark:border-zinc-800 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(168,85,247,0.10),transparent_70%)]"
+        className="px-6 md:px-8 py-20 md:py-24 border-t border-zinc-200 dark:border-zinc-800 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(37,99,235,0.10),transparent_70%)]"
       >
         <Reveal className={sectionHead}>
           <span className={eyebrow}>{t('landing.benefits.badge')}</span>
@@ -504,7 +504,7 @@ export default function LandingPage() {
           {logos.map((name) => (
             <span
               key={name}
-              className="px-4 py-2.5 border border-zinc-200 dark:border-zinc-800 rounded-full text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-fuchsia-500/40 hover:-translate-y-0.5 transition-all duration-200"
+              className="px-4 py-2.5 border border-zinc-200 dark:border-zinc-800 rounded-full text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-blue-500/40 hover:-translate-y-0.5 transition-all duration-200"
             >
               {name}
             </span>
@@ -518,7 +518,7 @@ export default function LandingPage() {
                 {t('landing.proof.testimonial')}
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-fuchsia-500 to-cyan-400 text-white inline-flex items-center justify-center font-bold text-sm">
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 text-white inline-flex items-center justify-center font-bold text-sm">
                   MR
                 </div>
                 <div>
@@ -536,7 +536,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-2 max-[520px]:grid-cols-1 gap-4">
             {stats.map((stat, index) => (
               <Reveal key={stat.label} delay={index * 60}>
-                <div className="h-full text-center p-7 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12] hover:-translate-y-1 hover:border-fuchsia-500/40 transition-all duration-200">
+                <div className="h-full text-center p-7 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12] hover:-translate-y-1 hover:border-blue-500/40 transition-all duration-200">
                   <div className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
                     {stat.value}
                   </div>
@@ -552,7 +552,7 @@ export default function LandingPage() {
 
       <section id="cta" className="px-6 md:px-8 py-20 md:py-24">
         <Reveal>
-          <div className="max-w-[880px] mx-auto rounded-[24px] border border-fuchsia-500/40 px-8 md:px-12 py-14 md:py-16 text-center bg-white dark:bg-[#0b0b12] [background-image:radial-gradient(60%_80%_at_50%_0%,rgba(168,85,247,0.18),transparent_70%)]">
+          <div className="max-w-[880px] mx-auto rounded-[24px] border border-blue-500/40 px-8 md:px-12 py-14 md:py-16 text-center bg-white dark:bg-[#0b0b12] [background-image:radial-gradient(60%_80%_at_50%_0%,rgba(37,99,235,0.18),transparent_70%)]">
             <h2 className="text-3xl md:text-[40px] tracking-tight font-medium text-zinc-900 dark:text-zinc-100 m-0 mb-3">
               {t('landing.cta.title')}
             </h2>
@@ -568,7 +568,7 @@ export default function LandingPage() {
                 placeholder={t('landing.cta.emailPlaceholder')}
                 aria-label={t('landing.cta.emailAria')}
                 required
-                className="flex-1 min-w-[240px] px-4 py-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12] text-zinc-900 dark:text-zinc-100 text-[15px] outline-none focus:border-fuchsia-500 transition-colors"
+                className="flex-1 min-w-[240px] px-4 py-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0b0b12] text-zinc-900 dark:text-zinc-100 text-[15px] outline-none focus:border-blue-500 transition-colors"
               />
               <button type="submit" className={btnPrimary}>
                 {t('landing.cta.requestAccess')}
@@ -597,19 +597,19 @@ export default function LandingPage() {
               </h4>
               <a
                 href="#features"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-fuchsia-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
               >
                 {t('landing.footer.links.features')}
               </a>
               <a
                 href="#benefits"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-fuchsia-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
               >
                 {t('landing.footer.links.benefits')}
               </a>
               <Link
                 to="/pricing"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-fuchsia-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
               >
                 {t('landing.footer.links.pricing')}
               </Link>
@@ -621,19 +621,19 @@ export default function LandingPage() {
               </h4>
               <Link
                 to="/about"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-fuchsia-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
               >
                 {t('landing.footer.links.about')}
               </Link>
               <Link
                 to="/careers"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-fuchsia-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
               >
                 {t('landing.footer.links.careers')}
               </Link>
               <Link
                 to="/press"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-fuchsia-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
               >
                 {t('landing.footer.links.press')}
               </Link>
@@ -645,19 +645,19 @@ export default function LandingPage() {
               </h4>
               <Link
                 to="/docs"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-fuchsia-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
               >
                 {t('landing.footer.links.docs')}
               </Link>
               <Link
                 to="/changelog"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-fuchsia-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
               >
                 {t('landing.footer.links.changelog')}
               </Link>
               <Link
                 to="/status"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-fuchsia-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
               >
                 {t('landing.footer.links.status')}
               </Link>
@@ -666,10 +666,11 @@ export default function LandingPage() {
         </div>
 
         <div className="max-w-[1120px] mx-auto flex flex-col md:flex-row justify-between gap-2 pt-6 border-t border-zinc-200 dark:border-zinc-800 text-[13px] text-zinc-500 dark:text-zinc-500 text-center md:text-left">
-          <span>© {new Date().getFullYear()} {t('common.brand')}, Inc.</span>
+          <span>{'\u00A9'} {new Date().getFullYear()} {t('common.brand')}, Inc.</span>
           <span>{t('landing.footer.madeWith')}</span>
         </div>
       </footer>
     </div>
   )
 }
+

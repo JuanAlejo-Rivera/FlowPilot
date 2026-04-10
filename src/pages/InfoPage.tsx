@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import { LanguageSwitcher } from '../components/LanguageSwitcher'
@@ -40,7 +40,7 @@ export default function InfoPage({ pageKey }: { pageKey: InfoPageKey }) {
           <div className="mt-8">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-br from-fuchsia-500 to-indigo-500 text-white text-[15px] font-semibold no-underline shadow-[0_10px_30px_-12px_rgba(99,102,241,0.6)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-12px_rgba(99,102,241,0.75)] transition-all duration-200"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white text-[15px] font-semibold no-underline shadow-[0_10px_30px_-12px_rgba(99,102,241,0.6)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-12px_rgba(99,102,241,0.75)] transition-all duration-200"
             >
               {t('common.backHome')}
             </Link>
@@ -50,3 +50,4 @@ export default function InfoPage({ pageKey }: { pageKey: InfoPageKey }) {
     </main>
   )
 }
+

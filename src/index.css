@@ -7,10 +7,13 @@
 
 @layer base {
   html {
-    color-scheme: light dark;
+    color-scheme: light;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+  }
+  html.dark {
+    color-scheme: dark;
   }
   html,
   body {
@@ -19,12 +22,10 @@
     color: #3f3f46;
     font-family: var(--font-sans);
   }
-  @media (prefers-color-scheme: dark) {
-    html,
-    body {
-      background: #0b0b12;
-      color: #a1a1aa;
-    }
+  html.dark,
+  html.dark body {
+    background: #0b0b12;
+    color: #a1a1aa;
   }
   #root {
     min-height: 100svh;

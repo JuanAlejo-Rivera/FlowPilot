@@ -4,6 +4,43 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        background: #ffffff;
+        color: #3f3f46;
+        color-scheme: light;
+      }
+      :root.dark {
+        background: #0b0b12;
+        color: #a1a1aa;
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        background: inherit;
+        color: inherit;
+      }
+    </style>
+    <script>
+      ;(() => {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+        const applyTheme = (isDark) => {
+          const root = document.documentElement
+          root.classList.toggle('dark', isDark)
+          root.style.colorScheme = isDark ? 'dark' : 'light'
+        }
+
+        applyTheme(mediaQuery.matches)
+
+        const handleChange = (event) => applyTheme(event.matches)
+        if (typeof mediaQuery.addEventListener === 'function') {
+          mediaQuery.addEventListener('change', handleChange)
+        } else if (typeof mediaQuery.addListener === 'function') {
+          mediaQuery.addListener(handleChange)
+        }
+      })()
+    </script>
     <title>FlowPilot — The AI workspace for teams that ship</title>
     <meta name="description" content="FlowPilot is the AI workspace where ideas, tasks and decisions stay organized — so your team always knows what's next." />
   </head>

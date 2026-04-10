@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import { LanguageSwitcher } from '../components/LanguageSwitcher'
@@ -20,7 +20,7 @@ export default function NotFoundPage() {
         </header>
 
         <section className="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/60 dark:bg-zinc-900/40 p-8 md:p-12 text-center">
-          <p className="m-0 mb-2 text-sm font-semibold tracking-[0.14em] uppercase text-fuchsia-600 dark:text-fuchsia-400">
+          <p className="m-0 mb-2 text-sm font-semibold tracking-[0.14em] uppercase text-blue-600 dark:text-blue-400">
             404
           </p>
           <h1 className="m-0 mb-4 text-3xl md:text-5xl font-medium tracking-tight text-zinc-900 dark:text-zinc-100">
@@ -33,7 +33,7 @@ export default function NotFoundPage() {
           <div className="mt-8">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-br from-fuchsia-500 to-indigo-500 text-white text-[15px] font-semibold no-underline shadow-[0_10px_30px_-12px_rgba(99,102,241,0.6)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-12px_rgba(99,102,241,0.75)] transition-all duration-200"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white text-[15px] font-semibold no-underline shadow-[0_10px_30px_-12px_rgba(99,102,241,0.6)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-12px_rgba(99,102,241,0.75)] transition-all duration-200"
             >
               {t('common.backHome')}
             </Link>
@@ -43,3 +43,4 @@ export default function NotFoundPage() {
     </main>
   )
 }
+

@@ -109,7 +109,7 @@ export const es = {
       product: 'Producto',
       company: 'Empresa',
       resources: 'Recursos',
-      madeWith: 'Hecho con cuidado. Potenciado por IA.',
+      madeWith: 'Hecho con cuidado.',
       links: {
         features: 'Funciones',
         benefits: 'Beneficios',
