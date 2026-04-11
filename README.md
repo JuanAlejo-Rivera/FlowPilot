@@ -8,6 +8,7 @@ Responsive landing page for **FlowPilot**, a fictional AI workspace product. Bui
 - GitHub Repository: https://github.com/JuanAlejo-Rivera/FlowPilot
 - Video Walkthrough (2-4 min): https://REPLACE_WITH_YOUR_VIDEO_URL
 - Walkthrough script (repo file): VIDEO_WALKTHROUGH.md
+- Bilingual speaking script (EN/ES): VIDEO_SCRIPT_BILINGUAL.md
 
 > Replace the remaining placeholder URL before sending the final submission.
 
