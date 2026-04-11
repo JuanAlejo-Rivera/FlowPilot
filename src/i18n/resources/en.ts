@@ -145,7 +145,7 @@ export const en = {
       product: 'Product',
       company: 'Company',
       resources: 'Resources',
-      madeWith: 'Built with React, Vite and too much coffee.',
+      madeWith: 'Built with React and Vite for this technical prototype.',
       links: {
         features: 'Features',
         benefits: 'Benefits',
@@ -161,9 +161,9 @@ export const en = {
   },
   pages: {
     demo: {
-      title: 'Product demo',
+      title: 'Prototype scope',
       description:
-        'This route is ready for an embedded video or a short guided tour of FlowPilot.',
+        'This technical test focuses on a single landing page. The product walkthrough is represented in the homepage mockup and section flow.',
     },
     pricing: {
       title: 'Pricing',

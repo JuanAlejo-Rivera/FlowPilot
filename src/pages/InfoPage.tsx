@@ -2,6 +2,7 @@
 import { useTranslation } from 'react-i18next'
 
 import { DisplayControlsMenu } from '../components/DisplayControlsMenu'
+import { Logo } from './landing/LandingParts'
 
 export type InfoPageKey =
   | 'demo'
@@ -41,12 +42,7 @@ export default function InfoPage({ pageKey }: { pageKey: InfoPageKey }) {
     <main className="min-h-screen bg-[radial-gradient(130%_110%_at_10%_0%,#ffffff_0%,#eef3ff_45%,#edf2fa_100%)] dark:bg-none dark:bg-[#0b0b12] text-zinc-700 dark:text-zinc-300 px-6 py-8 md:px-8">
       <div className={`${isPricing ? 'max-w-6xl' : 'max-w-4xl'} mx-auto`}>
         <header className="flex flex-wrap items-center justify-between gap-3 mb-12">
-          <Link
-            to="/"
-            className="text-lg font-bold text-zinc-900 dark:text-zinc-100 no-underline"
-          >
-            {t('common.brand')}
-          </Link>
+          <Logo />
           <DisplayControlsMenu />
         </header>
 

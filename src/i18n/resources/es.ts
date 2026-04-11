@@ -148,7 +148,7 @@ export const es = {
       product: 'Producto',
       company: 'Empresa',
       resources: 'Recursos',
-      madeWith: 'Hecho con React, Vite y demasiado café.',
+      madeWith: 'Construido con React y Vite para este prototipo técnico.',
       links: {
         features: 'Funciones',
         benefits: 'Beneficios',
@@ -164,9 +164,9 @@ export const es = {
   },
   pages: {
     demo: {
-      title: 'Demo del producto',
+      title: 'Alcance del prototipo',
       description:
-        'Esta ruta está lista para un vídeo incrustado o un tour guiado corto de FlowPilot.',
+        'Esta prueba técnica se enfoca en una sola landing page. El recorrido del producto está representado en el mockup y en el flujo de secciones de la home.',
     },
     pricing: {
       title: 'Precios',
