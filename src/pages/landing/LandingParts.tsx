@@ -204,9 +204,9 @@ export function MockUI() {
     <div
       role="group"
       aria-label={t('landing.mock.previewAria')}
-      className="rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/88 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none overflow-hidden shadow-[0_32px_90px_-34px_rgba(15,23,42,0.38),0_12px_34px_-16px_rgba(15,23,42,0.24)] dark:shadow-[0_30px_80px_-30px_rgba(0,0,0,0.35),0_8px_30px_-10px_rgba(0,0,0,0.15)] transform-[perspective(1600px)_rotateX(2deg)_rotateY(-4deg)] hover:transform-[perspective(1600px)_rotateX(0deg)_rotateY(0deg)] transition-transform duration-500 ease-out"
+      className="rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/88 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none overflow-hidden shadow-[0_32px_90px_-34px_rgba(15,23,42,0.38),0_12px_34px_-16px_rgba(15,23,42,0.24)] dark:shadow-[0_30px_80px_-30px_rgba(0,0,0,0.35),0_8px_30px_-10px_rgba(0,0,0,0.15)] md:transform-[perspective(1600px)_rotateX(2deg)_rotateY(-4deg)] md:hover:transform-[perspective(1600px)_rotateX(0deg)_rotateY(0deg)] transition-transform duration-500 ease-out"
     >
-      <div className="flex items-center gap-2 px-3 py-2.5 border-b border-slate-200 dark:border-zinc-800 bg-slate-100/80 dark:bg-zinc-900/50">
+      <div className="flex flex-wrap items-center gap-2 px-3 py-2.5 border-b border-slate-200 dark:border-zinc-800 bg-slate-100/80 dark:bg-zinc-900/50">
         {windowStyle === 'mac' ? (
           <div aria-hidden className="inline-flex items-center gap-1.5 shrink-0">
             <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
@@ -225,14 +225,14 @@ export function MockUI() {
           </div>
         )}
 
-        <div className="flex-1 min-w-0 px-3 py-1.5 rounded-md border border-slate-200 dark:border-zinc-700 bg-white/85 dark:bg-zinc-800/60 text-[11px] text-zinc-500 dark:text-zinc-400 font-mono text-left truncate">
+        <div className="order-3 basis-full sm:order-none sm:basis-auto sm:flex-1 min-w-0 px-3 py-1.5 rounded-md border border-slate-200 dark:border-zinc-700 bg-white/85 dark:bg-zinc-800/60 text-[11px] text-zinc-500 dark:text-zinc-400 font-mono text-left truncate">
           https://flowpilot.ai/workspace/atlas
         </div>
 
         <div
           role="group"
           aria-label={t('landing.mock.chromeToggleAria')}
-          className="inline-flex items-center gap-0.5 p-0.5 rounded-md border border-slate-200 dark:border-zinc-700 bg-white/85 dark:bg-zinc-800/60 shrink-0"
+          className="order-2 ml-auto sm:ml-0 inline-flex items-center gap-0.5 p-0.5 rounded-md border border-slate-200 dark:border-zinc-700 bg-white/85 dark:bg-zinc-800/60 shrink-0"
         >
           <button
             type="button"
@@ -261,7 +261,7 @@ export function MockUI() {
         </div>
 
         {windowStyle === 'windows' ? (
-          <div aria-hidden className="ml-1 inline-flex items-center shrink-0">
+          <div aria-hidden className="ml-1 hidden sm:inline-flex items-center shrink-0">
             <span className="w-8 h-6 inline-flex items-center justify-center rounded-sm text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200/70 dark:hover:bg-zinc-800/80 transition-colors">
               <svg
                 viewBox="0 0 10 10"
