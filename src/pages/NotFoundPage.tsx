@@ -1,7 +1,7 @@
 ﻿import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-import { LanguageSwitcher } from '../components/LanguageSwitcher'
+import { DisplayControlsMenu } from '../components/DisplayControlsMenu'
 
 export default function NotFoundPage() {
   const { t } = useTranslation()
@@ -16,7 +16,7 @@ export default function NotFoundPage() {
           >
             {t('common.brand')}
           </Link>
-          <LanguageSwitcher />
+          <DisplayControlsMenu />
         </header>
 
         <section className="rounded-3xl border border-slate-200 dark:border-zinc-800 bg-white/82 dark:bg-zinc-900/40 backdrop-blur-sm dark:backdrop-blur-none shadow-[0_22px_56px_-34px_rgba(15,23,42,0.38)] dark:shadow-none p-8 md:p-12 text-center">

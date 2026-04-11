@@ -23,21 +23,41 @@
     </style>
     <script>
       ;(() => {
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+        const root = document.documentElement
+        const mq = window.matchMedia('(prefers-color-scheme: dark)')
 
-        const applyTheme = (isDark) => {
-          const root = document.documentElement
+        const getStored = () => {
+          try {
+            return window.localStorage.getItem('theme')
+          } catch (_) {
+            return null
+          }
+        }
+
+        const resolveIsDark = () => {
+          const stored = getStored()
+          if (stored === 'dark') return true
+          if (stored === 'light') return false
+          return mq.matches
+        }
+
+        const apply = () => {
+          const isDark = resolveIsDark()
           root.classList.toggle('dark', isDark)
           root.style.colorScheme = isDark ? 'dark' : 'light'
         }
 
-        applyTheme(mediaQuery.matches)
+        apply()
 
-        const handleChange = (event) => applyTheme(event.matches)
-        if (typeof mediaQuery.addEventListener === 'function') {
-          mediaQuery.addEventListener('change', handleChange)
-        } else if (typeof mediaQuery.addListener === 'function') {
-          mediaQuery.addListener(handleChange)
+        const handleChange = () => {
+          const stored = getStored()
+          if (stored === 'dark' || stored === 'light') return
+          apply()
+        }
+        if (typeof mq.addEventListener === 'function') {
+          mq.addEventListener('change', handleChange)
+        } else if (typeof mq.addListener === 'function') {
+          mq.addListener(handleChange)
         }
       })()
     </script>
