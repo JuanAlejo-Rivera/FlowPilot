@@ -36,6 +36,9 @@ export const es = {
     },
     mock: {
       previewAria: 'Vista previa de captura con IA en FlowPilot',
+      chromeToggleAria: 'Vista del estilo de ventana',
+      chromeWindows: 'Win',
+      chromeMac: 'Mac',
       workspace: 'Espacio',
       dashboard: 'Panel',
       boards: 'Tableros',

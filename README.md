@@ -2,7 +2,24 @@
 
 Responsive landing page for **FlowPilot**, a fictional AI workspace product. Built as the deliverable for a Senior Frontend + Vibe Coding technical test.
 
-> Live demo: _add your Vercel URL here_
+## Submission links
+
+- Live URL (Vercel): https://flow-pilot-eight.vercel.app/
+- GitHub Repository: https://github.com/JuanAlejo-Rivera/FlowPilot
+- Video Walkthrough (2-4 min): https://REPLACE_WITH_YOUR_VIDEO_URL
+- Walkthrough script (repo file): VIDEO_WALKTHROUGH.md
+
+> Replace the remaining placeholder URL before sending the final submission.
+
+---
+
+## Submission checklist
+
+- [x] Single responsive landing page with required sections
+- [x] Source code in GitHub repository
+- [x] README with setup, stack, decisions, AI usage and trade-offs
+- [x] Live deployed URL added above
+- [ ] 2-4 minute walkthrough video URL added above
 
 ---
 
@@ -88,7 +105,7 @@ Class-name tokens like `btnPrimary`, `btnGhost`, `eyebrow`, `sectionH2`, `sectio
 
 ## AI-assisted workflow
 
-This build was done with Claude Code as a pair. My role was product direction, architecture and taste; the model handled code generation, migration from vanilla CSS to Tailwind v4, and copy iteration.
+This build was done with AI pair-programming support (primarily GitHub Copilot Chat in this iteration). My role was product direction, architecture and taste; AI support helped with code generation, migration from vanilla CSS to Tailwind v4, and copy iteration.
 
 What I used AI for:
 

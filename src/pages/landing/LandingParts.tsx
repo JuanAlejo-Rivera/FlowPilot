@@ -74,14 +74,14 @@ export function Logo() {
     >
       <span aria-hidden="true" className="inline-flex">
         <svg viewBox="0 0 24 24" width="24" height="24">
-          <defs>
-            <linearGradient id="logo-gradient" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0" stopColor="#2563eb" />
-              <stop offset="1" stopColor="#06b6d4" />
-            </linearGradient>
-          </defs>
-          <path d="M4 12 L12 4 L20 12 L12 20 Z" fill="url(#logo-gradient)" />
-          <circle cx="12" cy="12" r="3" fill="#0b0a0f" />
+          <path d="M12 3 21 12 12 21 3 12 12 3Z" fill="#2563eb" />
+          <path d="M12 7.5 16.5 12 12 16.5 7.5 12 12 7.5Z" fill="#dbeafe" />
+          <path
+            d="M12 9.1v5.8"
+            stroke="#1e3a8a"
+            strokeWidth="1.3"
+            strokeLinecap="round"
+          />
         </svg>
       </span>
       <span>{t('common.brand')}</span>
@@ -161,6 +161,7 @@ export function Nav() {
 
 export function MockUI() {
   const { t } = useTranslation()
+  const [windowStyle, setWindowStyle] = useState<'windows' | 'mac'>('windows')
 
   const captures = [
     {
@@ -201,17 +202,104 @@ export function MockUI() {
 
   return (
     <div
-      role="img"
+      role="group"
       aria-label={t('landing.mock.previewAria')}
       className="rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/88 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none overflow-hidden shadow-[0_32px_90px_-34px_rgba(15,23,42,0.38),0_12px_34px_-16px_rgba(15,23,42,0.24)] dark:shadow-[0_30px_80px_-30px_rgba(0,0,0,0.35),0_8px_30px_-10px_rgba(0,0,0,0.15)] transform-[perspective(1600px)_rotateX(2deg)_rotateY(-4deg)] hover:transform-[perspective(1600px)_rotateX(0deg)_rotateY(0deg)] transition-transform duration-500 ease-out"
     >
-      <div className="flex items-center gap-1.5 px-3.5 py-3 border-b border-slate-200 dark:border-zinc-800 bg-slate-100/80 dark:bg-zinc-900/50">
-        <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
-        <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
-        <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-        <div className="ml-2.5 flex-1 px-3 py-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-800/60 text-xs text-zinc-500 dark:text-zinc-400 font-mono text-left truncate">
-          flowpilot.ai/workspace/atlas
+      <div className="flex items-center gap-2 px-3 py-2.5 border-b border-slate-200 dark:border-zinc-800 bg-slate-100/80 dark:bg-zinc-900/50">
+        {windowStyle === 'mac' ? (
+          <div aria-hidden className="inline-flex items-center gap-1.5 shrink-0">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
+            <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
+          </div>
+        ) : (
+          <div className="inline-flex items-center gap-2 min-w-0 shrink-0">
+            <span
+              aria-hidden
+              className="w-4 h-4 rounded-[4px] bg-linear-to-br from-blue-600 to-cyan-500"
+            />
+            <span className="text-[11px] font-medium text-zinc-600 dark:text-zinc-300 truncate">
+              FlowPilot
+            </span>
+          </div>
+        )}
+
+        <div className="flex-1 min-w-0 px-3 py-1.5 rounded-md border border-slate-200 dark:border-zinc-700 bg-white/85 dark:bg-zinc-800/60 text-[11px] text-zinc-500 dark:text-zinc-400 font-mono text-left truncate">
+          https://flowpilot.ai/workspace/atlas
         </div>
+
+        <div
+          role="group"
+          aria-label={t('landing.mock.chromeToggleAria')}
+          className="inline-flex items-center gap-0.5 p-0.5 rounded-md border border-slate-200 dark:border-zinc-700 bg-white/85 dark:bg-zinc-800/60 shrink-0"
+        >
+          <button
+            type="button"
+            onClick={() => setWindowStyle('windows')}
+            aria-pressed={windowStyle === 'windows'}
+            className={`px-2 py-1 rounded-[5px] text-[10px] font-semibold transition-colors ${
+              windowStyle === 'windows'
+                ? 'bg-zinc-200 text-zinc-900 dark:bg-zinc-700 dark:text-zinc-100'
+                : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100'
+            }`}
+          >
+            {t('landing.mock.chromeWindows')}
+          </button>
+          <button
+            type="button"
+            onClick={() => setWindowStyle('mac')}
+            aria-pressed={windowStyle === 'mac'}
+            className={`px-2 py-1 rounded-[5px] text-[10px] font-semibold transition-colors ${
+              windowStyle === 'mac'
+                ? 'bg-zinc-200 text-zinc-900 dark:bg-zinc-700 dark:text-zinc-100'
+                : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100'
+            }`}
+          >
+            {t('landing.mock.chromeMac')}
+          </button>
+        </div>
+
+        {windowStyle === 'windows' ? (
+          <div aria-hidden className="ml-1 inline-flex items-center shrink-0">
+            <span className="w-8 h-6 inline-flex items-center justify-center rounded-sm text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200/70 dark:hover:bg-zinc-800/80 transition-colors">
+              <svg
+                viewBox="0 0 10 10"
+                width="10"
+                height="10"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.2"
+              >
+                <path d="M1 5h8" />
+              </svg>
+            </span>
+            <span className="w-8 h-6 inline-flex items-center justify-center rounded-sm text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200/70 dark:hover:bg-zinc-800/80 transition-colors">
+              <svg
+                viewBox="0 0 10 10"
+                width="10"
+                height="10"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.2"
+              >
+                <rect x="1.5" y="1.5" width="7" height="7" />
+              </svg>
+            </span>
+            <span className="w-8 h-6 inline-flex items-center justify-center rounded-sm text-zinc-500 dark:text-zinc-400 hover:bg-red-500/20 hover:text-red-600 dark:hover:text-red-400 transition-colors">
+              <svg
+                viewBox="0 0 10 10"
+                width="10"
+                height="10"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.2"
+              >
+                <path d="M2 2l6 6M8 2l-6 6" />
+              </svg>
+            </span>
+          </div>
+        ) : null}
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-[0.95fr_1.05fr] min-h-80">
         <aside className="border-b sm:border-b-0 sm:border-r border-slate-200 dark:border-zinc-800 p-3.5 sm:p-4 bg-slate-100/70 dark:bg-zinc-900/40">
