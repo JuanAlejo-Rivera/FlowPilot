@@ -171,7 +171,51 @@ export const es = {
     pricing: {
       title: 'Precios',
       description:
-        'Planes, límites y ruta de upgrade van aquí. La ruta ya está conectada con React Router.',
+        'Planes simples para equipos en distintas etapas. Empieza gratis y escala solo cuando el flujo esté estable.',
+      meta: {
+        badge: 'Precios de acceso temprano',
+        note: 'Si necesitas facturación anual, términos de compras o soporte para SOC 2, lo vemos en Enterprise.',
+        footnote: '* Precios de demo para el prototipo.',
+      },
+      tiers: [
+        {
+          name: 'Starter',
+          price: '$0',
+          period: '/ mes',
+          blurb: 'Para equipos pequeños que validan el flujo antes del rollout.',
+          cta: 'Empezar gratis',
+          features: [
+            'Hasta 5 compañeros',
+            'Captura con IA desde Slack, email y notas de reunión',
+            'Tableros básicos y línea de decisiones',
+          ],
+        },
+        {
+          name: 'Team',
+          price: '$12',
+          period: 'por usuario / mes',
+          blurb: 'Para equipos de producto y operaciones que entregan cada semana.',
+          cta: 'Solicitar acceso',
+          highlight: true,
+          features: [
+            'Proyectos ilimitados e historial completo',
+            'Sincronización prioritaria y automatizaciones más ricas',
+            'Permisos por rol y registros listos para auditoría',
+          ],
+        },
+        {
+          name: 'Enterprise',
+          price: 'Custom',
+          period: 'acuerdo anual',
+          blurb: 'Para revisión de seguridad, legal y operación a escala.',
+          cta: 'Agendar demo',
+          features: [
+            'SSO con SAML y aprovisionamiento SCIM',
+            'Soporte en seguridad y compliance',
+            'Plan de onboarding con acompañamiento dedicado',
+          ],
+        },
+      ],
     },
     about: {
       title: 'Acerca de FlowPilot',

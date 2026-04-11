@@ -168,7 +168,51 @@ export const en = {
     pricing: {
       title: 'Pricing',
       description:
-        'Plans, limits and upgrade paths go here. The route is already wired through React Router.',
+        'Simple plans for teams at different stages. Start free, then move up only when the workflow is stable.',
+      meta: {
+        badge: 'Early access pricing',
+        note: 'Need annual billing, procurement terms, or SOC 2 paperwork? We can handle that on Enterprise.',
+        footnote: '* Demo pricing for prototype purposes only.',
+      },
+      tiers: [
+        {
+          name: 'Starter',
+          price: '$0',
+          period: '/ month',
+          blurb: 'For small teams testing the workflow before rollout.',
+          cta: 'Start free',
+          features: [
+            'Up to 5 teammates',
+            'AI capture from Slack, email and meeting notes',
+            'Basic boards and decision timeline',
+          ],
+        },
+        {
+          name: 'Team',
+          price: '$12',
+          period: 'per user / month',
+          blurb: 'For product and ops teams shipping every week.',
+          cta: 'Request access',
+          highlight: true,
+          features: [
+            'Unlimited projects and workspace history',
+            'Priority sync and richer automations',
+            'Role-based access and audit-ready logs',
+          ],
+        },
+        {
+          name: 'Enterprise',
+          price: 'Custom',
+          period: 'annual agreement',
+          blurb: 'For security reviews, legal workflows and scale.',
+          cta: 'Book a demo',
+          features: [
+            'SAML SSO and SCIM provisioning',
+            'Security and compliance support',
+            'Onboarding plan with dedicated success partner',
+          ],
+        },
+      ],
     },
     about: {
       title: 'About FlowPilot',
