@@ -13,6 +13,7 @@ export const es = {
       dark: 'Oscuro',
     },
     backHome: 'Volver al inicio',
+    backToTop: 'Volver arriba',
   },
   nav: {
     features: 'Funciones',

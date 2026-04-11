@@ -1,6 +1,7 @@
 ﻿import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
+import { BackToTop } from '@/components/BackToTop'
 import {
   BenefitCard,
   FeatureCard,
@@ -387,6 +388,8 @@ export default function LandingPage() {
           <span>{t('landing.footer.madeWith')}</span>
         </div>
       </footer>
+
+      <BackToTop />
     </div>
   )
 }

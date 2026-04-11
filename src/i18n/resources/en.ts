@@ -13,6 +13,7 @@ export const en = {
       dark: 'Dark',
     },
     backHome: 'Back to home',
+    backToTop: 'Back to top',
   },
   nav: {
     features: 'Features',
