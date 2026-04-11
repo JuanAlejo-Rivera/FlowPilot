@@ -5,13 +5,13 @@ import { useTranslation } from 'react-i18next'
 import { DisplayControlsMenu } from '@/components/DisplayControlsMenu'
 
 export const btnPrimary =
-  'inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-linear-to-br from-blue-700 to-cyan-500 dark:from-blue-600 dark:to-cyan-500 text-white text-[15px] font-semibold border-0 cursor-pointer no-underline shadow-[0_12px_30px_-14px_rgba(37,99,235,0.55)] hover:-translate-y-0.5 hover:shadow-[0_18px_46px_-16px_rgba(37,99,235,0.68)] dark:shadow-[0_10px_30px_-12px_rgba(99,102,241,0.6)] dark:hover:shadow-[0_16px_40px_-12px_rgba(99,102,241,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500 transition-all duration-200'
+  'inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-linear-to-br from-emerald-600 to-teal-400 dark:from-emerald-500 dark:to-teal-400 text-white text-[15px] font-semibold border-0 cursor-pointer no-underline shadow-[0_12px_30px_-14px_rgba(16,185,129,0.55)] hover:-translate-y-0.5 hover:shadow-[0_18px_46px_-16px_rgba(16,185,129,0.68)] dark:shadow-[0_10px_30px_-12px_rgba(16,185,129,0.5)] dark:hover:shadow-[0_16px_40px_-12px_rgba(16,185,129,0.65)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500 transition-all duration-200'
 
 export const btnGhost =
-  'inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/70 dark:bg-zinc-800/40 text-slate-700 dark:text-zinc-100 text-[15px] font-semibold border border-slate-300/75 dark:border-zinc-800 cursor-pointer backdrop-blur-sm dark:backdrop-blur-none no-underline hover:bg-white/90 dark:hover:bg-zinc-800/50 hover:border-blue-500/50 transition-all duration-200'
+  'inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/70 dark:bg-zinc-800/40 text-slate-700 dark:text-zinc-100 text-[15px] font-semibold border border-slate-300/75 dark:border-zinc-800 cursor-pointer backdrop-blur-sm dark:backdrop-blur-none no-underline hover:bg-white/90 dark:hover:bg-zinc-800/50 hover:border-emerald-500/50 transition-all duration-200'
 
 export const eyebrow =
-  'inline-block text-xs font-semibold tracking-[0.12em] uppercase text-blue-600 dark:text-blue-400 bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/30'
+  'inline-block text-xs font-semibold tracking-[0.12em] uppercase text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/30'
 
 export const sectionHead = 'text-center max-w-3xl mx-auto mb-14'
 export const sectionH2 =
@@ -74,11 +74,11 @@ export function Logo() {
     >
       <span aria-hidden="true" className="inline-flex">
         <svg viewBox="0 0 24 24" width="24" height="24">
-          <path d="M12 3 21 12 12 21 3 12 12 3Z" fill="#2563eb" />
-          <path d="M12 7.5 16.5 12 12 16.5 7.5 12 12 7.5Z" fill="#dbeafe" />
+          <path d="M12 3 21 12 12 21 3 12 12 3Z" fill="#059669" />
+          <path d="M12 7.5 16.5 12 12 16.5 7.5 12 12 7.5Z" fill="#d1fae5" />
           <path
             d="M12 9.1v5.8"
-            stroke="#1e3a8a"
+            stroke="#064e3b"
             strokeWidth="1.3"
             strokeLinecap="round"
           />
@@ -217,7 +217,7 @@ export function MockUI() {
           <div className="inline-flex items-center gap-2 min-w-0 shrink-0">
             <span
               aria-hidden
-              className="w-4 h-4 rounded-sm bg-linear-to-br from-blue-600 to-cyan-500"
+              className="w-4 h-4 rounded-sm bg-linear-to-br from-emerald-500 to-teal-400"
             />
             <span className="text-[11px] font-medium text-zinc-600 dark:text-zinc-300 truncate">
               FlowPilot
@@ -313,7 +313,7 @@ export function MockUI() {
                 className="rounded-lg border border-slate-200 dark:border-zinc-800 bg-white/92 dark:bg-[#0b0b12] p-2.5"
               >
                 <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-[10px] uppercase tracking-wide text-blue-600 dark:text-blue-400 font-semibold">
+                  <span className="text-[10px] uppercase tracking-wide text-emerald-600 dark:text-emerald-400 font-semibold">
                     {capture.source}
                   </span>
                   <span className="text-[10px] text-zinc-500 dark:text-zinc-400">{capture.age}</span>
@@ -369,11 +369,11 @@ export function MockUI() {
             ))}
           </div>
 
-          <div className="mt-2.5 rounded-lg border border-blue-500/25 bg-blue-500/8 dark:bg-blue-500/10 px-2.5 py-2 flex items-center justify-between gap-2">
+          <div className="mt-2.5 rounded-lg border border-emerald-500/25 bg-emerald-500/8 dark:bg-emerald-500/10 px-2.5 py-2 flex items-center justify-between gap-2">
             <span className="text-[11px] font-semibold text-zinc-700 dark:text-zinc-200">
               {t('landing.mock.syncReady')}
             </span>
-            <span className="text-[10px] text-blue-600 dark:text-blue-400 font-semibold">
+            <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">
               {t('landing.mock.pushToBoards')}
             </span>
           </div>
@@ -393,8 +393,8 @@ export function FeatureCard({
   icon: ReactNode
 }) {
   return (
-    <div className="h-full p-8 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/85 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none text-left shadow-[0_16px_42px_-30px_rgba(15,23,42,0.45)] dark:shadow-none transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:shadow-[0_24px_52px_-26px_rgba(37,99,235,0.35)] dark:hover:shadow-none">
-      <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 mb-4">
+    <div className="h-full p-8 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/85 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none text-left shadow-[0_16px_42px_-30px_rgba(15,23,42,0.45)] dark:shadow-none transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-[0_24px_52px_-26px_rgba(16,185,129,0.35)] dark:hover:shadow-none">
+      <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 mb-4">
         {icon}
       </div>
       <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 m-0 mb-2">
@@ -417,8 +417,8 @@ export function BenefitCard({
   description: string
 }) {
   return (
-    <div className="h-full text-center p-8 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/85 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_16px_42px_-30px_rgba(15,23,42,0.45)] dark:shadow-none transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40">
-      <div className="text-6xl font-bold tracking-tight leading-none bg-linear-to-br from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+    <div className="h-full text-center p-8 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/85 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_16px_42px_-30px_rgba(15,23,42,0.45)] dark:shadow-none transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40">
+      <div className="text-6xl font-bold tracking-tight leading-none bg-linear-to-br from-emerald-500 to-teal-400 bg-clip-text text-transparent">
         {metric}
       </div>
       <div className="text-base font-semibold text-zinc-900 dark:text-zinc-100 mt-3 mb-2">

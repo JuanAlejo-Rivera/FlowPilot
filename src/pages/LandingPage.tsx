@@ -114,21 +114,21 @@ export default function LandingPage() {
   return (
     <div
       id="top"
-      className="min-h-screen w-full bg-[radial-gradient(120%_120%_at_0%_0%,#ffffff_0%,#eef4ff_38%,#edf2fa_100%)] dark:bg-none dark:bg-[#0b0b12] text-zinc-600 dark:text-zinc-400 font-sans antialiased"
+      className="min-h-screen w-full bg-[radial-gradient(120%_120%_at_0%_0%,#ffffff_0%,#eef9f4_38%,#edf8f3_100%)] dark:bg-none dark:bg-[#0b0b12] text-zinc-600 dark:text-zinc-400 font-sans antialiased"
     >
       <Nav />
 
       <section className="relative overflow-hidden max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24 grid gap-12 md:gap-14 md:grid-cols-[1.05fr_1.15fr] items-center">
         <div
           aria-hidden
-          className="absolute inset-0 pointer-events-none bg-[radial-gradient(60%_55%_at_80%_10%,rgba(37,99,235,0.18),transparent_60%),radial-gradient(50%_50%_at_10%_90%,rgba(6,182,212,0.15),transparent_60%)] dark:opacity-40"
+          className="absolute inset-0 pointer-events-none bg-[radial-gradient(60%_55%_at_80%_10%,rgba(16,185,129,0.18),transparent_60%),radial-gradient(50%_50%_at_10%_90%,rgba(45,212,191,0.15),transparent_60%)] dark:opacity-40"
         />
 
         <Reveal className="relative">
           <span className={eyebrow}>{t('landing.badge')}</span>
           <h1 className="mt-5 mb-5 text-[44px] md:text-6xl leading-[1.05] tracking-[-0.02em] font-medium text-zinc-900 dark:text-zinc-100">
             {t('landing.hero.titleLead')}{' '}
-            <span className="bg-linear-to-br from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-br from-emerald-500 to-teal-400 bg-clip-text text-transparent">
               {t('landing.hero.titleAccent')}
             </span>
             {t('landing.hero.titleTail')}
@@ -162,7 +162,7 @@ export default function LandingPage() {
           <MockUI />
           <div
             aria-hidden
-            className="absolute -inset-[10%] -z-10 blur-3xl bg-[radial-gradient(closest-side,rgba(37,99,235,0.35),transparent_70%)] dark:opacity-40"
+            className="absolute -inset-[10%] -z-10 blur-3xl bg-[radial-gradient(closest-side,rgba(16,185,129,0.35),transparent_70%)] dark:opacity-40"
           />
         </Reveal>
       </section>
@@ -192,7 +192,7 @@ export default function LandingPage() {
 
       <section
         id="benefits"
-        className="px-6 md:px-8 py-20 md:py-24 border-t border-slate-200 dark:border-zinc-800 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(37,99,235,0.10),transparent_70%)] dark:bg-none"
+        className="px-6 md:px-8 py-20 md:py-24 border-t border-slate-200 dark:border-zinc-800 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(16,185,129,0.10),transparent_70%)] dark:bg-none"
       >
         <Reveal className={sectionHead}>
           <span className={eyebrow}>{t('landing.benefits.badge')}</span>
@@ -222,7 +222,7 @@ export default function LandingPage() {
           {logos.map((name) => (
             <span
               key={name}
-              className="px-4 py-2.5 border border-slate-200 dark:border-zinc-800 bg-white/65 dark:bg-transparent rounded-full text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-blue-500/40 hover:-translate-y-0.5 transition-all duration-200"
+              className="px-4 py-2.5 border border-slate-200 dark:border-zinc-800 bg-white/65 dark:bg-transparent rounded-full text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-emerald-500/40 hover:-translate-y-0.5 transition-all duration-200"
             >
               {name}
             </span>
@@ -236,7 +236,7 @@ export default function LandingPage() {
                 {t('landing.proof.testimonial')}
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-linear-to-br from-blue-600 to-cyan-500 text-white inline-flex items-center justify-center font-bold text-sm">
+                <div className="w-11 h-11 rounded-full bg-linear-to-br from-emerald-500 to-teal-400 text-white inline-flex items-center justify-center font-bold text-sm">
                   MR
                 </div>
                 <div>
@@ -254,7 +254,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-2 max-[520px]:grid-cols-1 gap-4">
             {stats.map((stat, index) => (
               <Reveal key={stat.label} delay={index * 60}>
-                <div className="h-full text-center p-7 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/84 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_14px_36px_-28px_rgba(15,23,42,0.4)] dark:shadow-none hover:-translate-y-1 hover:border-blue-500/40 transition-all duration-200">
+                <div className="h-full text-center p-7 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white/84 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_14px_36px_-28px_rgba(15,23,42,0.4)] dark:shadow-none hover:-translate-y-1 hover:border-emerald-500/40 transition-all duration-200">
                   <div className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
                     {stat.value}
                   </div>
@@ -270,7 +270,7 @@ export default function LandingPage() {
 
       <section id="cta" className="px-6 md:px-8 py-20 md:py-24">
         <Reveal>
-          <div className="max-w-220 mx-auto rounded-3xl border border-blue-500/40 px-8 md:px-12 py-14 md:py-16 text-center bg-white/88 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_26px_64px_-30px_rgba(15,23,42,0.34)] dark:shadow-none bg-[radial-gradient(60%_80%_at_50%_0%,rgba(37,99,235,0.18),transparent_70%)] dark:bg-none">
+          <div className="max-w-220 mx-auto rounded-3xl border border-emerald-500/40 px-8 md:px-12 py-14 md:py-16 text-center bg-white/88 dark:bg-[#0b0b12] backdrop-blur-sm dark:backdrop-blur-none shadow-[0_26px_64px_-30px_rgba(15,23,42,0.34)] dark:shadow-none bg-[radial-gradient(60%_80%_at_50%_0%,rgba(16,185,129,0.18),transparent_70%)] dark:bg-none">
             <h2 className="text-3xl md:text-[40px] tracking-tight font-medium text-zinc-900 dark:text-zinc-100 m-0 mb-3">
               {t('landing.cta.title')}
             </h2>
@@ -286,7 +286,7 @@ export default function LandingPage() {
                 placeholder={t('landing.cta.emailPlaceholder')}
                 aria-label={t('landing.cta.emailAria')}
                 required
-                className="w-full min-w-0 sm:flex-1 sm:min-w-60 px-4 py-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white/85 dark:bg-[#0b0b12] text-zinc-900 dark:text-zinc-100 text-[15px] outline-none focus:border-blue-500 transition-colors"
+                className="w-full min-w-0 sm:flex-1 sm:min-w-60 px-4 py-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white/85 dark:bg-[#0b0b12] text-zinc-900 dark:text-zinc-100 text-[15px] outline-none focus:border-emerald-500 transition-colors"
               />
               <button type="submit" className={`${btnPrimary} w-full sm:w-auto`}>
                 {t('landing.cta.requestAccess')}
@@ -315,19 +315,19 @@ export default function LandingPage() {
               </h4>
               <a
                 href="#features"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-emerald-500 transition-colors"
               >
                 {t('landing.footer.links.features')}
               </a>
               <a
                 href="#benefits"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-emerald-500 transition-colors"
               >
                 {t('landing.footer.links.benefits')}
               </a>
               <Link
                 to="/pricing"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-emerald-500 transition-colors"
               >
                 {t('landing.footer.links.pricing')}
               </Link>
@@ -339,19 +339,19 @@ export default function LandingPage() {
               </h4>
               <Link
                 to="/about"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-emerald-500 transition-colors"
               >
                 {t('landing.footer.links.about')}
               </Link>
               <Link
                 to="/careers"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-emerald-500 transition-colors"
               >
                 {t('landing.footer.links.careers')}
               </Link>
               <Link
                 to="/press"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-emerald-500 transition-colors"
               >
                 {t('landing.footer.links.press')}
               </Link>
@@ -363,19 +363,19 @@ export default function LandingPage() {
               </h4>
               <Link
                 to="/docs"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-emerald-500 transition-colors"
               >
                 {t('landing.footer.links.docs')}
               </Link>
               <Link
                 to="/changelog"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-emerald-500 transition-colors"
               >
                 {t('landing.footer.links.changelog')}
               </Link>
               <Link
                 to="/status"
-                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-blue-500 transition-colors"
+                className="block text-sm text-zinc-600 dark:text-zinc-400 mb-2 no-underline hover:text-emerald-500 transition-colors"
               >
                 {t('landing.footer.links.status')}
               </Link>
