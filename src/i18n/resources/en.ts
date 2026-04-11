@@ -31,7 +31,7 @@ export const en = {
       titleTail: '.',
       subtitle:
         'Ideas in Slack. Tasks in Notion. Decisions buried in a meeting three weeks ago. FlowPilot pulls them into one place — and keeps them there without anyone babysitting it.',
-      watchDemo: 'Watch the 90s tour',
+      watchDemo: 'See product walkthrough',
       note: 'Free for your first 5 teammates · No card needed',
     },
     mock: {
@@ -161,9 +161,18 @@ export const en = {
   },
   pages: {
     demo: {
-      title: 'Prototype scope',
+      title: 'Product walkthrough',
       description:
-        'This technical test focuses on a single landing page. The product walkthrough is represented in the homepage mockup and section flow.',
+        'This view explains what the short demo video covers and how the landing prototype maps to that flow.',
+      meta: {
+        badge: 'About this video',
+        note: 'The full walkthrough is a 60-90 second overview of the same experience shown in the homepage mockup.',
+        bullets: [
+          'How incoming context is captured from Slack, email and meeting notes.',
+          'How tasks, owners and decisions are grouped in one timeline.',
+          'How teams move from capture to execution without losing context.',
+        ],
+      },
     },
     pricing: {
       title: 'Pricing',

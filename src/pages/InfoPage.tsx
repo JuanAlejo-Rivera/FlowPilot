@@ -24,9 +24,22 @@ type PricingTier = {
   highlight?: boolean
 }
 
+type DemoMeta = {
+  badge: string
+  note: string
+  bullets: string[]
+}
+
 export default function InfoPage({ pageKey }: { pageKey: InfoPageKey }) {
   const { t } = useTranslation()
+  const isDemo = pageKey === 'demo'
   const isPricing = pageKey === 'pricing'
+
+  const demoMeta = isDemo
+    ? (t('pages.demo.meta', {
+        returnObjects: true,
+      }) as DemoMeta)
+    : null
 
   const pricingMeta = isPricing
     ? (t('pages.pricing.meta', {
@@ -53,6 +66,31 @@ export default function InfoPage({ pageKey }: { pageKey: InfoPageKey }) {
           <p className="m-0 text-base md:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl">
             {t(`pages.${pageKey}.description`)}
           </p>
+
+          {isDemo ? (
+            <div className="mt-8 rounded-2xl border border-blue-500/25 bg-blue-500/7 dark:bg-blue-500/12 p-5 md:p-6">
+              <p className="m-0 text-[11px] uppercase tracking-[0.12em] text-blue-700 dark:text-blue-300 font-semibold">
+                {demoMeta?.badge}
+              </p>
+              <p className="m-0 mt-2 text-sm md:text-base text-zinc-700 dark:text-zinc-200 leading-relaxed">
+                {demoMeta?.note}
+              </p>
+
+              <ul className="m-0 mt-4 p-0 list-none space-y-2.5">
+                {(demoMeta?.bullets ?? []).map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-2.5 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300"
+                  >
+                    <span aria-hidden className="text-blue-600 dark:text-blue-400">
+                      •
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
 
           {isPricing ? (
             <div className="mt-8">

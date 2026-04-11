@@ -31,7 +31,7 @@ export const es = {
       titleTail: '.',
       subtitle:
         'Ideas en Slack. Tareas en Notion. Decisiones enterradas en una reunión de hace tres semanas. FlowPilot las junta en un solo sitio — y las mantiene ahí sin que nadie las tenga que cuidar.',
-      watchDemo: 'Ver el tour de 90s',
+      watchDemo: 'Ver recorrido del producto',
       note: 'Gratis para tus primeros 5 compañeros · Sin tarjeta',
     },
     mock: {
@@ -164,9 +164,18 @@ export const es = {
   },
   pages: {
     demo: {
-      title: 'Alcance del prototipo',
+      title: 'Recorrido del producto',
       description:
-        'Esta prueba técnica se enfoca en una sola landing page. El recorrido del producto está representado en el mockup y en el flujo de secciones de la home.',
+        'Esta vista explica qué cubre el video corto de demo y cómo el prototipo de la landing representa ese flujo.',
+      meta: {
+        badge: 'Sobre este video',
+        note: 'El walkthrough completo es un resumen de 60-90 segundos de la misma experiencia que se muestra en el mockup de la home.',
+        bullets: [
+          'Cómo se captura contexto desde Slack, email y notas de reunión.',
+          'Cómo se agrupan tareas, responsables y decisiones en una sola línea de tiempo.',
+          'Cómo el equipo pasa de captura a ejecución sin perder contexto.',
+        ],
+      },
     },
     pricing: {
       title: 'Precios',
