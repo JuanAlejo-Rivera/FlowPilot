@@ -66,7 +66,7 @@ export default function InfoPage({ pageKey }: { pageKey: InfoPageKey }) {
                     key={tier.name}
                     className={`rounded-2xl border p-5 md:p-6 backdrop-blur-sm dark:backdrop-blur-none transition-all duration-200 ${
                       tier.highlight
-                        ? 'border-blue-500/40 bg-blue-500/[0.07] dark:bg-blue-500/[0.12]'
+                        ? 'border-blue-500/40 bg-blue-500/7 dark:bg-blue-500/12'
                         : 'border-slate-200 dark:border-zinc-800 bg-white/78 dark:bg-[#0b0b12]'
                     }`}
                   >

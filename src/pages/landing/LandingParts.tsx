@@ -217,7 +217,7 @@ export function MockUI() {
           <div className="inline-flex items-center gap-2 min-w-0 shrink-0">
             <span
               aria-hidden
-              className="w-4 h-4 rounded-[4px] bg-linear-to-br from-blue-600 to-cyan-500"
+              className="w-4 h-4 rounded-sm bg-linear-to-br from-blue-600 to-cyan-500"
             />
             <span className="text-[11px] font-medium text-zinc-600 dark:text-zinc-300 truncate">
               FlowPilot
