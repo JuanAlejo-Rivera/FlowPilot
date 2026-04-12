@@ -122,8 +122,8 @@ What I kept to myself:
 
 ## Known trade-offs & what I would do next
 
-- **Testing.** Add Vitest + Testing Library for unit tests on components like ThemeToggle, LanguageSwitcher and Reveal. Add Playwright for e2e smoke tests covering nav collapse, scroll-to-section, theme persistence across reloads, and language switch with `<html lang>` sync.
-- **CI pipeline.** Add a GitHub Actions workflow that runs `tsc --noEmit`, `vitest run`, and `vite build` on every pull request to catch regressions early.
-- **Page transitions.** Animate route changes with a subtle fade or slide so navigating between pages feels smoother.
-- **Lighthouse & axe-core audit.** Run automated accessibility and performance checks, fix any contrast issues in both themes, and verify semantic landmark structure.
+- **Unit & e2e testing.** Add Vitest + Testing Library for component-level tests — things like "select Dark, reload, assert `html.dark` is still present" or "click the EN/ES toggle and verify every visible string updates". Add Playwright for full browser smoke tests: nav collapse on mobile viewports, anchor scroll to the correct section offset, theme and language persistence across hard reloads.
+- **CI pipeline.** Add a GitHub Actions workflow (`ci.yml`) that runs `tsc --noEmit`, `vitest run`, and `vite build` on every pull request. If any step fails, the merge is blocked — no broken code reaches `main` without someone noticing.
+- **Route transitions.** Right now navigating between `/pricing`, `/about`, etc. is an instant swap. With more time I would add a short crossfade (opacity + translateY) between route exits and entries, using `useViewTransition` or a lightweight wrapper around `startViewTransition` — no animation library needed.
+- **Lighthouse & axe-core audit.** Run both in CI against the production build in light and dark mode. Fix any contrast ratio issues, verify every landmark and heading hierarchy, and keep the performance score above 95 by lazy-loading below-the-fold sections with `React.lazy` + `Suspense`.
 
