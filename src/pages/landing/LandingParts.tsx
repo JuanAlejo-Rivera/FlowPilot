@@ -225,7 +225,7 @@ export function MockUI() {
           </div>
         )}
 
-        <div className="order-3 basis-full sm:order-none sm:basis-auto sm:flex-1 min-w-0 px-3 py-1.5 rounded-md border border-slate-200 dark:border-zinc-700 bg-white/85 dark:bg-zinc-800/60 text-[11px] text-zinc-500 dark:text-zinc-400 font-mono text-left truncate">
+        <div className="order-3 basis-full sm:order-0 sm:basis-auto sm:flex-1 min-w-0 px-3 py-1.5 rounded-md border border-slate-200 dark:border-zinc-700 bg-white/85 dark:bg-zinc-800/60 text-[11px] text-zinc-500 dark:text-zinc-400 font-mono text-left truncate">
           https://flowpilot.ai/workspace/atlas
         </div>
 
