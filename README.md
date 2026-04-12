@@ -6,11 +6,7 @@ Responsive landing page for **FlowPilot**, a fictional AI workspace product. Bui
 
 - Live URL (Vercel): https://flow-pilot-eight.vercel.app/
 - GitHub Repository: https://github.com/JuanAlejo-Rivera/FlowPilot
-- Video Walkthrough (2-4 min): https://REPLACE_WITH_YOUR_VIDEO_URL
-- Walkthrough script (repo file): VIDEO_WALKTHROUGH.md
-- Bilingual speaking script (EN/ES): VIDEO_SCRIPT_BILINGUAL.md
-
-> Replace the remaining placeholder URL before sending the final submission.
+- Video Walkthrough (2-4 min): https://youtu.be/i88IyGHshhI
 
 ---
 
@@ -20,7 +16,7 @@ Responsive landing page for **FlowPilot**, a fictional AI workspace product. Bui
 - [x] Source code in GitHub repository
 - [x] README with setup, stack, decisions, AI usage and trade-offs
 - [x] Live deployed URL added above
-- [ ] 2-4 minute walkthrough video URL added above
+- [x] 2-4 minute walkthrough video URL added above
 
 ---
 
@@ -126,14 +122,8 @@ What I kept to myself:
 
 ## Known trade-offs & what I would do next
 
-- **Stats and testimonial are still fictional**, by design — this is a landing for a made-up product. In a real launch these would come from a CMS or MDX.
-- **Email form is a stub.** `onSubmit` calls `preventDefault` and stops. Wiring it to a real endpoint is a 10-line change.
-- **No analytics, no cookie banner, no privacy page.** Out of scope for the test.
-- **Images.** The hero visual is a pure-HTML mock on purpose — no external image requests, no CLS. In production I'd add a real screenshot behind `loading="lazy"` + a `fetchpriority="high"` LCP image.
-- **Tests.** I'd add Playwright smoke tests for the nav, the theme toggle persistence and the language switcher.
+- **Testing.** Add Vitest + Testing Library for unit tests on components like ThemeToggle, LanguageSwitcher and Reveal. Add Playwright for e2e smoke tests covering nav collapse, scroll-to-section, theme persistence across reloads, and language switch with `<html lang>` sync.
+- **CI pipeline.** Add a GitHub Actions workflow that runs `tsc --noEmit`, `vitest run`, and `vite build` on every pull request to catch regressions early.
+- **Page transitions.** Animate route changes with a subtle fade or slide so navigating between pages feels smoother.
+- **Lighthouse & axe-core audit.** Run automated accessibility and performance checks, fix any contrast issues in both themes, and verify semantic landmark structure.
 
----
-
-## License
-
-For evaluation purposes only.

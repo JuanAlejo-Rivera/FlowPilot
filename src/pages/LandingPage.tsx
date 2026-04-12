@@ -2,6 +2,7 @@
 import { useTranslation } from 'react-i18next'
 
 import { BackToTop } from '@/components/BackToTop'
+import { ScrollProgress } from '@/components/ScrollProgress'
 import {
   BenefitCard,
   FeatureCard,
@@ -116,6 +117,7 @@ export default function LandingPage() {
       id="top"
       className="min-h-screen w-full bg-[radial-gradient(120%_120%_at_0%_0%,#ffffff_0%,#eef9f4_38%,#edf8f3_100%)] dark:bg-none dark:bg-[#0b0b12] text-zinc-600 dark:text-zinc-400 font-sans antialiased"
     >
+      <ScrollProgress />
       <Nav />
 
       <section className="relative overflow-hidden max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24 grid gap-12 md:gap-14 md:grid-cols-[1.05fr_1.15fr] items-center">
