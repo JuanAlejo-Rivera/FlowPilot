@@ -22,10 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Local notes — not for the repo
-VIDEO_SCRIPT.md
-VIDEO_SCRIPT_EN.md
-VIDEO_SCRIPT_BILINGUAL.md
-
-
