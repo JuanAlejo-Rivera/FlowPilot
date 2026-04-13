@@ -107,7 +107,6 @@ This build was done with AI pair-programming support (primarily GitHub Copilot C
 What I used AI for:
 
 - Scaffolding the landing composition and the MockUI from a verbal description of the layout.
-- Migrating the first draft (vanilla CSS) to Tailwind v4 utilities in one pass.
 - Iterating on copy until it stopped sounding like a generated pitch deck (the "AI smell" pass).
 - Generating Spanish translations with consistent tone.
 - Proposing the `Reveal` component and the `ThemeToggle` anti-flash approach.
@@ -115,7 +114,6 @@ What I used AI for:
 What I kept to myself:
 
 - All product decisions: which sections, what the hero says, what the metrics mean, which colors.
-- Pushing back when the output got generic (the "remove AI smell" revision).
 - Verifying every dependency version and the Tailwind v4 migration path.
 
 ---
